@@ -13,10 +13,11 @@ def _convert_to_annual_salary(df):
     df.loc[df["pay_period"] == "MONTHLY", "salary"] = df["salary"] * 12
     df.loc[df["pay_period"] == "WEEKLY", "salary"] = df["salary"] * 52
     df.loc[df["pay_period"] == "HOURLY", "salary"] = df["salary"] * 40 * 52
+    return df
 
 
 def _remove_salary_na(df):
-    df.dropna(subset=["salary"], inplace=True)
+    df = df.dropna(subset=["salary"])
     return df
 
 

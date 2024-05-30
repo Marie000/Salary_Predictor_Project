@@ -1,4 +1,6 @@
 import torchtext
+
+torchtext.disable_torchtext_deprecation_warning()
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
 from predictor_model.config import config
@@ -15,6 +17,7 @@ def _create_vocab(df, column):
     vocab = build_vocab_from_iterator(
         yield_tokens(df[column]), specials=["<unk>", "<pad>"], max_tokens=20000
     )
+    vocab.set_default_index(vocab["<unk>"])
     return vocab
 
 

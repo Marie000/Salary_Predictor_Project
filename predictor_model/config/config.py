@@ -4,13 +4,14 @@ import predictor_model
 import torch
 
 PACKAGE_ROOT = Path(predictor_model.__file__).resolve().parent
-DATA_PATH = os.path.join(PACKAGE_ROOT, "datasets")
+DATA_PATH = os.path.join(PACKAGE_ROOT, "dataset")
 TRAIN_DATA_FILE = "train.csv"
 TEST_DATA_FILE = "test.csv"
 SAVE_MODEL_PATH = os.path.join(PACKAGE_ROOT, "trained_models")
 SAVE_MODEL_NAME = "model_0.pt"
 SAVE_VOCAB_NAME = "vocab.pt"
 TOKENIZER = "basic_english"
+REBUILD_VOCAB = False
 
 TARGET = "salary"
 FEATURE = "description"
@@ -38,7 +39,6 @@ DROP_FEATURES = [
     "med_salary",
     "min_salary",
     "pay_period",
-    "avg_salary",
 ]
 
 BATCH_SIZE = 32

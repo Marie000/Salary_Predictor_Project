@@ -9,20 +9,22 @@ BATCH_SIZE = config.BATCH_SIZE
 
 
 def _collate_with_padding(data):
+    vocab = data_handling.load_vocab()
+    padding_index = vocab["<pad>"]
     text_list, result_list = [], []
     for text, result in data:
         result_list.append(result)
         text = torch.tensor(text_pipeline.text_pipeline(text), dtype=torch.int64)
         text_list.append(text)
     text_list = pad_sequence(text_list, batch_first=True, padding_value=padding_index)
-    result_list = torch.tensor(result_list, dtype=torch.float32, device=device)
+    result_list = torch.tensor(result_list, dtype=torch.float32, device=config.DEVICE)
 
     return text_list, result_list
 
 
 def create_dataloader(data):
-    vocab = data_handling.load_vocab()
-    dataloader = Dataloader(
+    data = list(zip(data[config.FEATURE], data[config.TARGET]))
+    dataloader = DataLoader(
         data, collate_fn=_collate_with_padding, batch_size=BATCH_SIZE, drop_last=True
     )
     return dataloader

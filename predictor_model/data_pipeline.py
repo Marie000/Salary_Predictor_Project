@@ -6,7 +6,6 @@ def pipeline(data, train=True):
     if train:
         data = preprocessing.preprocess_description(data)
         # maybe only save vocab if doesn't exist??
-        data = text_pipeline.create_and_save_vocab(data)
-    data = text_pipeline.text_pipeline(data)
+        text_pipeline.create_and_save_vocab(data)
     dataloader = dataloaders.create_dataloader(data)
     return dataloader
