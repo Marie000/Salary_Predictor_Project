@@ -6,7 +6,7 @@ env:
 install:
 	pip install -r requirements.txt
 
-setup:
+build:
 	python setup.py sdist bdist_wheel
 
 update-package:
