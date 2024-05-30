@@ -19,7 +19,7 @@ def list_requirements(fname="requirements.txt"):
 
 
 about = {}
-with open(Path(__file__).resolve().parent / "VERSION") as f:
+with open(Path(__file__).resolve().parent / "predictor_model" / "VERSION") as f:
     _version = f.read().strip()
     about["__version__"] = _version
 
