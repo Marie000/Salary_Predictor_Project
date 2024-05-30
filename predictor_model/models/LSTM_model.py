@@ -3,10 +3,7 @@ from torch import nn
 from predictor_model.processing import data_handling
 from predictor_model.config import config
 
-## NOTE TO SELF: most of this goes in the training_pipeline file. 
-
-
-vocab_size = data_handling.get_vocab_size()
+## NOTE TO SELF: most of this goes in the training_pipeline file.
 
 
 class RNNModel(nn.Module):
@@ -38,6 +35,7 @@ class RNNModel(nn.Module):
 
 
 def create_model():
+    vocab_size = data_handling.get_vocab_size()
     model = RNNModel(
         vocab_size,
         config.EMBEDDING_DIM,
