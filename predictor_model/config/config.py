@@ -3,7 +3,7 @@ import os
 import predictor_model
 import torch
 
-PACKAGE_ROOT = Path(predictor_model)
+PACKAGE_ROOT = Path(predictor_model.__file__).resolve().parent
 DATA_PATH = os.path.join(PACKAGE_ROOT, "datasets")
 TRAIN_DATA_FILE = "train.csv"
 TEST_DATA_FILE = "test.csv"
@@ -54,4 +54,3 @@ DROPOUT_RATE = 0.5
 EPOCHS = 50
 LEARNING_RATE = 0.005
 WEIGHT_DECAY = 0.05
-
