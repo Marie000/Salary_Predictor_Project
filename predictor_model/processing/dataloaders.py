@@ -5,7 +5,6 @@ from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader
 
 
-vocab = data_handling.load_vocab()
 BATCH_SIZE = config.BATCH_SIZE
 
 
@@ -22,6 +21,7 @@ def _collate_with_padding(data):
 
 
 def create_dataloader(data):
+    vocab = data_handling.load_vocab()
     dataloader = Dataloader(
         data, collate_fn=_collate_with_padding, batch_size=BATCH_SIZE, drop_last=True
     )
