@@ -8,3 +8,6 @@ install:
 
 setup:
 	python setup.py sdist bdist_wheel
+
+update-package:
+	pip install git+https://github.com/Marie000/Salary_Predictor_Project.git -U
