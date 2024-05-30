@@ -7,7 +7,6 @@ import torch
 import os
 from torcheval.metrics.functional import r2_score
 
-model = LSTM_model.create_model()
 train_data = data_handling.load_dataset(config.TRAIN_DATA_FILE)
 test_data = data_handling.load_dataset(config.TEST_DATA_FILE)
 
@@ -59,6 +58,7 @@ def eval_step(model, dataloader, loss_fn):
 
 
 def train():
+    model = LSTM_model.create_model()
     train_dataloader = data_pipeline(train_data)
     test_dataloader = data_pipeline(test_data, train=False)
     for epoch in range(config.EPOCHS):
