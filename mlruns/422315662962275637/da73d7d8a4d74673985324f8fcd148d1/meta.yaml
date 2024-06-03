@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marie/src/salary-predictor-mlops/mlruns/422315662962275637/da73d7d8a4d74673985324f8fcd148d1/artifacts
+end_time: 1717190820521
+entry_point_name: ''
+experiment_id: '422315662962275637'
+lifecycle_stage: active
+run_id: da73d7d8a4d74673985324f8fcd148d1
+run_name: suave-shrike-82
+run_uuid: da73d7d8a4d74673985324f8fcd148d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717190816649
+status: 4
+tags: []
+user_id: marie

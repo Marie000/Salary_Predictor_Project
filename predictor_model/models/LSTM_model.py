@@ -13,7 +13,7 @@ class RNNModel(nn.Module):
         self.num_layers = num_layers
         self.embedding = nn.Embedding(input_dim, embedding_dim)
         self.rnn = nn.LSTM(
-            embedding_dim, hidden_dim, num_layers=num_layers, dropout=0.5
+            embedding_dim, hidden_dim, num_layers=num_layers, dropout=dropout_rate
         )
         self.fc = nn.Linear(hidden_dim * num_layers, 1)
         self.init_weights()
@@ -34,13 +34,12 @@ class RNNModel(nn.Module):
         return out
 
 
-def create_model():
+def create_model(
+    embedding_dim=config.EMBEDDING_DIM,
+    hidden_dim=config.HIDDEN_DIM,
+    n_layers=config.NUM_LAYERS,
+    dropout_rate=config.DROPOUT_RATE,
+):
     vocab_size = data_handling.get_vocab_size()
-    model = RNNModel(
-        vocab_size,
-        config.EMBEDDING_DIM,
-        config.HIDDEN_DIM,
-        config.NUM_LAYERS,
-        config.DROPOUT_RATE,
-    )
+    model = RNNModel(vocab_size, embedding_dim, hidden_dim, n_layers, dropout_rate)
     return model

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marie/src/salary-predictor-mlops/mlruns/422315662962275637/e915937aefb24a5dabda78c3718087b9/artifacts
+end_time: 1717190717206
+entry_point_name: ''
+experiment_id: '422315662962275637'
+lifecycle_stage: active
+run_id: e915937aefb24a5dabda78c3718087b9
+run_name: puzzled-shoat-144
+run_uuid: e915937aefb24a5dabda78c3718087b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717190577651
+status: 4
+tags: []
+user_id: marie

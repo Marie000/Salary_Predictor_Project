@@ -50,6 +50,7 @@ def eval_step(model, dataloader, loss_fn):
         eval_loss /= len(dataloader)
         eval_r2 /= len(dataloader)
         print(f"Test Loss: {eval_loss}, r-squared score: {eval_r2}")
+        return eval_r2
 
 
 def train():

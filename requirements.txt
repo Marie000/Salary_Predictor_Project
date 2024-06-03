@@ -4,3 +4,4 @@ torchtext==0.18.0
 pytest==7.1.2
 pandas==1.5.3
 numpy==1.26.0
+mlflow==2.13.1

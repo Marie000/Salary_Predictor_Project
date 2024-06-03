@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marie/src/salary-predictor-mlops/mlruns/439376478282143414/45a00a423a2a4ab0af872919dfdc5f5c/artifacts
+end_time: 1717116083661
+entry_point_name: ''
+experiment_id: '439376478282143414'
+lifecycle_stage: active
+run_id: 45a00a423a2a4ab0af872919dfdc5f5c
+run_name: intelligent-stag-864
+run_uuid: 45a00a423a2a4ab0af872919dfdc5f5c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717116083649
+status: 3
+tags: []
+user_id: marie
