@@ -1,13 +1,8 @@
+build-docker:
+	sudo docker build -t predictor-image .
 
-env:
-	python3 -m venv env
-	source  ml_package/bin/activate
+run-docker:
+	sudo docker run -d -it --name predictor -p 8080:8080 predictor-image bash
 
-install:
-	pip install -r requirements.txt
-
-build:
-	python setup.py sdist bdist_wheel
-
-update-package:
-	pip install git+https://github.com/Marie000/Salary_Predictor_Project.git -U
+api-docker:
+	sudo docker exec -d -w /code predictor main.py

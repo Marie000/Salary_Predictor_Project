@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marie/src/salary-predictor-mlops/mlruns/439376478282143414/e6618f3850b44fb88d1dd74bb8957e0d/artifacts
+end_time: 1717116071612
+entry_point_name: ''
+experiment_id: '439376478282143414'
+lifecycle_stage: active
+run_id: e6618f3850b44fb88d1dd74bb8957e0d
+run_name: bedecked-sponge-429
+run_uuid: e6618f3850b44fb88d1dd74bb8957e0d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717116071602
+status: 3
+tags: []
+user_id: marie

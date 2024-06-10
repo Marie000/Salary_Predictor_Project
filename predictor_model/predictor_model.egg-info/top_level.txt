@@ -1,5 +1,0 @@
-config
-dataset
-models
-processing
-trained_models

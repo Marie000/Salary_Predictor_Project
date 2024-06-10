@@ -1,0 +1,10 @@
+include *.txt
+include *.md
+include *.py
+include *.pt
+
+recursive-include ./predictor_model/*
+include ./datasets/*.csv
+include ./trained_models/*.pt
+include ./test/*
+recursive-exclude * __pycache__

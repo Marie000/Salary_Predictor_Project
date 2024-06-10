@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: predictor-model
+Version: 1.0.4
+Home-page: https://github.com/Marie000/Salary_Predictor_Project
+Author: Marie Pelletier
+Author-email: marie.pelletier@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >3.10

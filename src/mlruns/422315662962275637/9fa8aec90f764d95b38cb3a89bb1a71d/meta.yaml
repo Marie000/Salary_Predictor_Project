@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marie/src/salary-predictor-mlops/mlruns/422315662962275637/9fa8aec90f764d95b38cb3a89bb1a71d/artifacts
+end_time: 1717191536984
+entry_point_name: ''
+experiment_id: '422315662962275637'
+lifecycle_stage: active
+run_id: 9fa8aec90f764d95b38cb3a89bb1a71d
+run_name: beautiful-goose-336
+run_uuid: 9fa8aec90f764d95b38cb3a89bb1a71d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717191491179
+status: 4
+tags: []
+user_id: marie
